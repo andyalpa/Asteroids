@@ -19,5 +19,5 @@ Installation
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/asteroids-game.git
+git clone https://github.com/andyalpa/Asteroids.git
 Open index.html in your web browser to start playing.
