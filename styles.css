@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+canvas {
+  border: 2px solid #ffffff;
+  border-radius: 5%;
+  background-color: #000000;
+}
+
+#buttons-guide {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#game-title {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
