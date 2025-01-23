@@ -51,6 +51,7 @@
       /** @type {HTMLCanvasElement} */
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
+      
 
       // Set up the power-ups
       var powerUps = [];
@@ -91,12 +92,14 @@
         switch (e.keyCode) {
           case 32: // Space bar (shoot laser)
             shootLaser();
+            fxLaser.play(); // Play laser sound on user interaction
             break;
           case 37: // Left
             ship.rotation = 0.1;
             break;
           case 38: // Up
             ship.thrusting = true;
+            fxThrust.play(); // Play thrust sound on user interaction
             break;
           case 39: // Right
             ship.rotation = -0.1;
@@ -120,6 +123,7 @@
             break;
           case 38: // Up
             ship.thrusting = false;
+            fxThrust.stop(); // Stop thrust sound on user interaction
             break;
           case 39: // Right
             ship.rotation = 0;
@@ -374,7 +378,7 @@
               explodeTime: 0,
             });
           }
-          fxLaser.play();
+          // fxLaser.play(); // Moved to keydown event listener
         }
         ship.canShoot = false;
       }
